@@ -1,0 +1,109 @@
+---
+
+---
+
+<section class="process">
+    <h1>Our Renovation Process</h1>
+
+    <div class="embla">
+        <div class="embla__container">
+            <!-- Slide -->
+            <div class="embla__slide">
+                <div class="process-card">
+                    <div class="step">1</div>
+                    <div class="card-text">
+                        <h2>Consultation & Design</h2>
+                        <p>
+                            We listen to your vision and create a custom design
+                            plan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div class="embla__slide">
+                <div class="process-card">
+                    <div class="step">2</div>
+                    <div class="card-text">
+                        <h2>Premium Materials</h2>
+                        <p>Only the best materials for durability and style.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide -->
+            <div class="embla__slide">
+                <div class="process-card">
+                    <div class="step">3</div>
+                    <div class="card-text">
+                        <h2>
+                            Only the best materials for durability and style.
+                        </h2>
+                        <p>
+                            Timely, clean, and professional service from start
+                            to finish.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .embla {
+        overflow: hidden;
+    }
+    .embla__container {
+        display: flex;
+        gap: 1em;
+    }
+    .embla__slide {
+        flex: 0 0 100%;
+        min-width: 0;
+    }
+
+    .process {
+        background-color: var(--dark);
+        color: white;
+        padding: 2em 1em;
+    }
+    .process h1 {
+        font-size: 3em;
+        padding-bottom: 1em;
+    }
+    .process-card {
+        background-color: white;
+        color: var(--black);
+        display: flex;
+        height: 100%;
+    }
+
+    .step {
+        min-width: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "heading";
+        font-size: 2rem;
+        border-right: 1px dashed var(--dark);
+    }
+    .card-text {
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .card-text h2 {
+        font-size: 1rem;
+    }
+</style>
+
+<script>
+    import EmblaCarousel from "embla-carousel";
+
+    const emblaNode = document.querySelector(".embla");
+    const options = { loop: false };
+    const emblaApi = EmblaCarousel(emblaNode, options);
+
+    console.log(emblaApi.slideNodes()); // Access API
+</script>

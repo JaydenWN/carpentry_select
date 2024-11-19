@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import kitchenImage from "../../../public/kitchen.png";
+import bathroomImage from "../../../public/bathroom.png";
+import deckImage from "../../../public/deck.png";
+import arrowIcon from "../../../public/icons/arrow-right.svg";
+---
+
+<section class="our_work">
+    <h1>Our Work.</h1>
+
+    <div class="work-cards">
+        <div class="work-card">
+            <div class="work-image">
+                <Image
+                    src={kitchenImage}
+                    alt={"Kitchen Renovations"}
+                    class={"image"}
+                />
+            </div>
+
+            <a href="/"
+                >Kitchen Renovations
+                <Image src={arrowIcon} alt={"right arrow"} /></a
+            >
+        </div>
+
+        <div class="work-card">
+            <div class="work-image">
+                <Image
+                    src={bathroomImage}
+                    alt={"Kitchen Renovations"}
+                    class={"image"}
+                />
+            </div>
+
+            <a href="/"
+                >Bathroom Transformations
+                <Image src={arrowIcon} alt={"right arrow"} /></a
+            >
+        </div>
+
+        <div class="work-card">
+            <div class="work-image">
+                <Image
+                    src={deckImage}
+                    alt={"Kitchen Renovations"}
+                    class={"image"}
+                />
+            </div>
+
+            <a href="/"
+                >Decking and Outdoor Areas
+                <Image src={arrowIcon} alt={"right arrow"} /></a
+            >
+        </div>
+    </div>
+</section>
+
+<style>
+    .our_work {
+        background-color: var(--dark);
+        color: white;
+        padding: 2em 1em;
+    }
+    .our_work h1 {
+        border-bottom: 1px solid white;
+        padding-bottom: 0.5em;
+        margin-bottom: 2em;
+    }
+    .image {
+        object-fit: cover;
+        width: 100%;
+    }
+    .work-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+    }
+
+    .work-card a {
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em 0px;
+    }
+</style>
