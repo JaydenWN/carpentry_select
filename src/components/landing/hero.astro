@@ -1,0 +1,64 @@
+---
+import Image from "astro/components/Image.astro";
+import mobileIcon from "../../../public/icons/phone_light.svg";
+import landingImg from "../../../public/landing_hero.png";
+---
+
+<section class="hero">
+    <p class="hero-text">
+        Transform Your Home with Stunning Kitchens, Bathrooms, and Decks Built
+        to Last.
+    </p>
+
+    <div class="hero-image">
+        <Image src={landingImg} alt={"Bathroom Renovation"} />
+        <div class="hero-buttons">
+            <a href="/">Contact Us</a>
+            <a href="tel:0418 282 139">
+                <Image src={mobileIcon} alt={"telephone"} />
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 0px 1em;
+    }
+    .hero-text {
+        font-size: 2rem;
+        border-left: 1px dashed var(--black);
+        padding: 0px 0.5em;
+        color: var(--black);
+        line-height: 1.5em;
+    }
+    .hero-text span {
+        text-decoration: underline 1px solid var(--black);
+        text-underline-offset: 6px;
+    }
+    .hero-image {
+        position: relative;
+    }
+    .hero-buttons {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        display: flex;
+    }
+    .hero-buttons a {
+        text-decoration: none;
+        color: white;
+        border: 2px solid white;
+        padding: 0.6em 1em 0.5em 1em;
+        margin: 0px 1em 1em 0px;
+        background-color: #201f197c;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+    }
+</style>

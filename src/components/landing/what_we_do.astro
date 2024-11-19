@@ -1,0 +1,78 @@
+---
+import Image from "astro/components/Image.astro";
+import bathroomIcon from "../../../public/icons/bathroom.svg";
+import kitchenIcon from "../../../public/icons/kitchen.svg";
+import outsideIcon from "../../../public/icons/outside.svg";
+---
+
+<section class="what">
+    <h1>What We Do</h1>
+
+    <div class="what-cards">
+        <div class="what-card">
+            <Image src={bathroomIcon} alt={"bathroom renovation"} />
+            <div class="card-text">
+                <h2>Bathroom Renovations</h2>
+                <p>
+                    From spa-like retreats to practical family solutions, we
+                    design bathrooms that combine style and functionality.
+                </p>
+            </div>
+        </div>
+
+        <div class="what-card">
+            <Image src={kitchenIcon} alt={"Kitchen Remodelings"} />
+            <div class="card-text">
+                <h2>Kitchen Remodeling</h2>
+                <p>
+                    Upgrade your kitchen with modern layouts, custom cabinets,
+                    and energy-efficient appliances tailored to your needs.
+                </p>
+            </div>
+        </div>
+
+        <div class="what-card">
+            <Image src={outsideIcon} alt={"bathroom renovation"} />
+            <div class="card-text">
+                <h2>Decks and Outdoor Spaces</h2>
+                <p>
+                    Extend your living space with beautifully crafted decks,
+                    perfect for entertaining or relaxing.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .what {
+        display: flex;
+        flex-direction: column;
+        color: var(--black);
+        padding: 0px 1em;
+        gap: 1em;
+    }
+    .what h1 {
+        border-bottom: 1px solid var(--dark);
+        padding-bottom: 0.5em;
+        font-size: 3em;
+    }
+    .what-card {
+        display: flex;
+        gap: 1em;
+    }
+    .what-card h2 {
+        border-bottom: 1px dashed var(--dark);
+    }
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .what-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 4em;
+        padding: 2em 0px;
+    }
+</style>

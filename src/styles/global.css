@@ -1,6 +1,6 @@
 :root {
 	--black: #171716;
-	--dark: #33322F;
+	--dark: #33322f;
 }
 
 @font-face {
@@ -15,33 +15,55 @@
 	font-style: normal;
 	font-display: swap;
 }
-*, *::before, *::after {
+*,
+*::before,
+*::after {
 	box-sizing: border-box;
-  }
-  * {
+}
+* {
 	margin: 0;
-  }
-  body {
+}
+body {
 	line-height: 1.5;
 	-webkit-font-smoothing: antialiased;
-	font-family: 'paragraph';
-  }
-  img, picture, video, canvas, svg {
+	font-family: "paragraph";
+}
+img,
+picture,
+video,
+canvas,
+svg {
 	display: block;
 	max-width: 100%;
-  }
-  input, button, textarea, select {
+}
+input,
+button,
+textarea,
+select {
 	font: inherit;
-  }
-  p, h1, h2, h3, h4, h5, h6 {
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	overflow-wrap: break-word;
-  }
-  p {
+}
+p {
 	text-wrap: pretty;
-	font-family: 'paragraph';
-  }
-  h1, h2, h3, h4, h5, h6 {
+	font-family: "paragraph";
+	font-size: 1.2rem;
+	line-height: 2rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	text-wrap: balance;
-	font-family: 'heading';
-  }
-  
+	font-family: "heading";
+	font-weight: 100;
+}

@@ -1,5 +1,23 @@
 ---
+import Hero from "../components/landing/hero.astro";
+import Intro from "../components/landing/intro.astro";
+import WhatWeDo from "../components/landing/what_we_do.astro";
 import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<SiteLayout title="Select Carpentry" description="Site description" />
+<SiteLayout title="Select Carpentry" description="Site description">
+    <div class="page-container">
+        <Hero />
+        <Intro />
+        <WhatWeDo />
+    </div>
+</SiteLayout>
+
+<style>
+    .page-container {
+        padding-top: 68px;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+</style>
