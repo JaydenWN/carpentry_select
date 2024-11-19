@@ -1,14 +1,136 @@
 ---
-import { SITE_TITLE } from "../consts";
+import Image from "astro/components/Image.astro";
+import menuIcon from "../../public/icons/menu.svg";
+import phoneIcon from "../../public/icons/phone.svg";
+import exitIcon from "../../public/icons/exit.svg";
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-	
-	
+<header class="navbar">
+	<h2><a href="/">Logo</a></h2>
+	<div class="navbar-buttons">
+		<div class="navbar-button">
+			<a href="tel:0418 282 139">
+				<Image src={phoneIcon} alt={"phone"} />
+			</a>
+		</div>
+		<div class="navbar-button" id="nav-open">
+			<Image src={menuIcon} alt={"menu"} id={"menu"} />
+			<Image src={exitIcon} alt={"exit"} id={"exit"} />
+		</div>
+	</div>
+	<nav class="nav-links">
+		<ul>
+			<li><a href="/" class="nav-link">Home</a></li>
+			<li><a href="/" class="nav-link">About</a></li>
+			<li><a href="/" class="nav-link">Services</a></li>
+			<li><a href="/" class="nav-link">Our Work</a></li>
+			<li><a href="/" class="nav-link">Contact</a></li>
+		</ul>
 	</nav>
 </header>
 <style>
-	
+	.navbar {
+		padding: 1em;
+		display: flex;
+		justify-content: space-between;
+	}
+	.navbar-buttons {
+		display: flex;
+		align-items: center;
+		gap: 1em;
+	}
+	.navbar-button {
+		width: 35px;
+		height: 35px;
+		object-fit: contain;
+	}
+	.navbar-button img {
+		width: 100%;
+		height: 100%;
+	}
+	.navbar-button:nth-of-type(1) img {
+		width: 70%;
+	}
+	nav {
+		position: absolute;
+		top: 68px;
+		left: 0px;
+		width: 100dvw;
+		height: calc(100dvh - 68px);
+		background-color: var(--dark);
+		display: flex;
+		padding: 2em;
+		visibility: hidden;
+	}
+	nav ul {
+		list-style: none;
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		width: 100%;
+	}
+	nav ul li {
+		min-width: 100%;
+		display: flex;
+	}
+	.nav-link {
+		text-decoration: none;
+		color: white;
+		font-size: 3rem;
+		font-weight: 100;
+		width: 100%;
+	}
+	#exit {
+		display: none;
+		width: 60%;
+		margin-left: 8px;
+	}
 </style>
+
+<script>
+	import { gsap } from "gsap";
+	const navButton = document.getElementById("nav-open");
+	const navLinks = document.querySelector(".nav-links");
+	const exitButton = document.getElementById("exit");
+	const menuButton = document.getElementById("menu");
+
+	navButton?.addEventListener("click", () => {
+		if (navLinks?.style.visibility === "visible") {
+			navLinks.style.visibility = "hidden";
+			const tl = gsap.timeline();
+			exitButton.style.display = "none";
+			menuButton.style.display = "block";
+			tl.to("#menu", { scale: 1, duration: 0.25 });
+			tl.fromTo("#exit", { scale: 0, duration: 0.25 }, { scale: 1 });
+		} else {
+			const tl = gsap.timeline();
+			exitButton.style.display = "block";
+			menuButton.style.display = "none";
+			tl.to("#menu", { scale: 0, duration: 0.25 });
+			tl.fromTo(
+				"#exit",
+				{ scale: 0, duration: 0.5, rotate: 90 },
+				{ scale: 1, rotate: 0 },
+			);
+			tl.fromTo(
+				".nav-links",
+				{ opacity: 0, height: 0 },
+				{
+					opacity: 1,
+					height: "calc(100dvh - 68px)",
+					ease: "slow(0.7,0.7,false)",
+				},
+			);
+
+			tl.fromTo(
+				".nav-link",
+				{ opacity: 0, x: -10 },
+				{ opacity: 1, x: 0, stagger: 0.1 },
+			);
+
+			tl.duration(0.5);
+			navLinks.style.visibility = "visible";
+		}
+	});
+</script>
