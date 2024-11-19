@@ -3,12 +3,53 @@ const today = new Date();
 ---
 
 <footer>
-	&copy; {today.getFullYear()} Your name here. All rights reserved.
+	<div class="site-links">
+		<ul class="links">
+			<p>Site Links</p>
+			<li><a href="/">Home</a></li>
+			<li><a href="/">About</a></li>
+			<li><a href="/">Our Work</a></li>
+			<li><a href="/">Our Services</a></li>
+			<li><a href="/">Contact Us</a></li>
+		</ul>
 
+		<ul class="links">
+			<p>Social Media</p>
+			<li><a href="/">Instagram</a></li>
+			<li><a href="/">Facebook</a></li>
+		</ul>
+	</div>
+	<p class="copyright">
+		&copy; {today.getFullYear()} Carpentry Select. All rights reserved.
+	</p>
 </footer>
 <style>
 	footer {
-
+		background-color: var(--black);
+		color: rgb(102, 102, 102);
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+		padding: 1em;
 	}
-
+	.site-links {
+		display: flex;
+		gap: 2em;
+	}
+	.links {
+		list-style-type: none;
+		color: rgb(168, 168, 168);
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+	}
+	.links a {
+		text-decoration: none;
+		color: rgb(102, 102, 102);
+	}
+	.copyright {
+		text-align: center;
+		font-size: small;
+	}
 </style>

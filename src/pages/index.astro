@@ -6,6 +6,8 @@ import WhatWeDo from "../components/landing/what_we_do.astro";
 import WhatSets from "../components/landing/what_sets.astro";
 import SiteLayout from "../layouts/SiteLayout.astro";
 import OurWork from "../components/landing/our_work.astro";
+import Contact from "../components/landing/contact.astro";
+import Testimonials from "../components/landing/testimonials.astro";
 ---
 
 <SiteLayout title="Select Carpentry" description="Site description">
@@ -16,12 +18,14 @@ import OurWork from "../components/landing/our_work.astro";
         <Process />
         <WhatSets />
         <OurWork />
+        <Testimonials />
+        <Contact />
     </div>
 </SiteLayout>
 
 <style>
     .page-container {
-        padding-top: 68px;
+        padding-top: calc(69px + 1em);
         display: flex;
         flex-direction: column;
         gap: 2em;

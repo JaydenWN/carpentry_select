@@ -1,0 +1,76 @@
+---
+
+---
+
+<section class="contact">
+    <h1>Ready to transform your home?</h1>
+    <p>
+        Let’s bring your renovation vision to life! Contact us today for a free
+        consultation and get one step closer to the kitchen, bathroom, or deck
+        you’ve always wanted.
+    </p>
+    <form class="contact-form">
+        <input
+            placeholder="First Name"
+            name="firstName"
+            type="text"
+            autocomplete="given-name"
+        />
+        <input
+            placeholder="Last Name"
+            name="lastName"
+            type="text"
+            autocomplete="family-name"
+        />
+        <input
+            placeholder="Email"
+            name="email"
+            type="email"
+            required
+            autocomplete="email"
+        />
+        <input placeholder="Phone" name="phone" type="tel" autocomplete="tel" />
+        <textarea name="message" placeholder="Message"></textarea>
+        <button>Submit</button>
+    </form>
+</section>
+
+<style>
+    .contact {
+        padding: 2em 1em;
+        background-color: var(--dark);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+    }
+    .contact h1 {
+        font-size: 3rem;
+        line-height: 1em;
+        text-transform: uppercase;
+    }
+    .contact p {
+        font-weight: 300;
+        line-height: 2.5rem;
+    }
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin-top: 1em;
+    }
+    .contact-form input,
+    textarea {
+        padding: 0.5em 1em;
+        border-radius: 0px;
+        border: 1px solid white;
+    }
+    .contact-form button {
+        background-color: transparent;
+        border: 2px solid white;
+        color: white;
+        max-width: fit-content;
+        padding: 0.5em 1em;
+        align-self: flex-end;
+    }
+</style>
