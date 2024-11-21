@@ -1,0 +1,34 @@
+---
+import WorkCard from "./work_card.astro";
+import bathroomImg from "../../../public/bathroom.png";
+import Image from "astro/components/Image.astro";
+import arrowIcon from "../../../public/icons/arrow-right.svg";
+---
+
+<section class="work-section">
+    <div class="arrow">
+        <small>Swipe to view</small>
+        <Image src={arrowIcon} alt="arrow" />
+    </div>
+    <WorkCard
+        img={bathroomImg}
+        imgAlt="Bathroom renovation"
+        text="Spa-inspired bathroom renovation in Taree, NSW."
+    />
+</section>
+
+<style>
+    .arrow {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1em;
+    }
+    .work-section {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--dark);
+        color: white;
+    }
+</style>

@@ -1,0 +1,45 @@
+---
+import ServiceCard from "./service_card.astro";
+import bathroomImg from "../../../public/bathroom.png";
+import kitchenImg from "../../../public/kitchen.png";
+import outdoorImg from "../../../public/deck.png";
+---
+
+<div>
+    <ServiceCard
+        title="Bathrooms"
+        text="Turn your bathroom into a luxurious oasis. From sleek modern designs to timeless classics, we specialize in bathroom renovations that combine beauty and practicality. Our team handles everything – tiling, cabinetry, fixtures, and more – ensuring a seamless result that fits your space and budget."
+        points={[
+            "Custom vanities and storage solutions",
+            "Premium tiling and waterproofing",
+            "High-quality fittings and fixtures",
+        ]}
+        img={bathroomImg}
+        imgAlt="Taree Bathroom Renovations"
+        theme="dark"
+    />
+    <ServiceCard
+        title="Kitchens"
+        text="The kitchen is the heart of your home, and we’re here to make it shine. Whether you’re dreaming of a stylish modern space or a cozy traditional design, we bring functionality and flair to your cooking and entertaining area."
+        points={[
+            "Custom cabinetry and joinery",
+            "Smart layouts for maximum efficiency",
+            "Durable benchtops and premium finishes",
+        ]}
+        img={kitchenImg}
+        imgAlt="Mid North Coast Renovation"
+        theme="light"
+    />
+    <ServiceCard
+        title="Outdoor Areas"
+        text="Make the most of your outdoor living with expertly crafted decks and entertaining areas. From spacious decks for family BBQs to cozy alfresco nooks, we design and build spaces that let you enjoy the beautiful Taree outdoors year-round."
+        points={[
+            "Durable hardwood or composite decking",
+            "Outdoor kitchens and entertaining areas",
+            "Pergolas, screens, and privacy solutions",
+        ]}
+        img={outdoorImg}
+        imgAlt="Mid North Coast Renovation"
+        theme="dark"
+    />
+</div>

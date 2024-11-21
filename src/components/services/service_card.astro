@@ -1,0 +1,76 @@
+---
+import Image from "astro/components/Image.astro";
+import pointIconDark from "../../../public/icons/checkmark-dark.svg";
+import pointIconLight from "../../../public/icons/checkmark-light.svg";
+
+const { title, text, points, img, imgAlt, theme } = Astro.props;
+const themeClass = theme === "light" ? "theme-light" : "theme-dark";
+---
+
+<section class={themeClass}>
+    <div class="service-card">
+        <h2>{title}</h2>
+        <p>{text}</p>
+        <ul class="points">
+            {
+                points.map((point) => (
+                    <li class="point">
+                        {theme == "light" ? (
+                            <Image src={pointIconLight} alt={"checkmark"} />
+                        ) : (
+                            <Image src={pointIconDark} alt={"checkmark"} />
+                        )}
+                        {point}
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+    <Image src={img} alt={imgAlt} class="service-image" />
+</section>
+
+<style>
+    .theme-dark {
+        color: white;
+        background-color: var(--dark);
+    }
+    .theme-light {
+        color: var(--black);
+        background-color: white;
+    }
+    .service-card {
+        padding: 2em 1em;
+    }
+    .service-card p {
+        font-size: 1.25rem;
+        font-weight: 300;
+        line-height: 2.5rem;
+    }
+    .service-card h2 {
+        font-size: 2.5rem;
+    }
+    .service-image {
+        object-fit: cover;
+        width: 100%;
+    }
+    .points {
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 0px;
+        justify-content: center;
+    }
+    .points img {
+        width: 3rem;
+        height: auto;
+    }
+    .point {
+        display: flex;
+        gap: 1em;
+        list-style: none;
+        padding: 0px;
+        font-size: 1.25rem;
+        font-weight: 300;
+    }
+</style>

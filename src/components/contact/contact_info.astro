@@ -1,0 +1,53 @@
+---
+import Image from "astro/components/Image.astro";
+import phoneIcon from "../../../public/icons/phone_outline.svg";
+import emailIcon from "../../../public/icons/email.svg";
+---
+
+<section class="contact-info">
+    <h2>How To Reach us</h2>
+
+    <div class="info">
+        <div class="">
+            <Image src={emailIcon} alt="Email" />
+            <p>info@selectcarpentry.com</p>
+        </div>
+        <div class="">
+            <Image src={phoneIcon} alt="Phone" />
+            <p>0418 282 139<p></p></p>
+        </div>
+    </div>
+
+    <p class="contact-footer">
+        Our team is ready to answer your questions, discuss your renovation
+        ideas, or provide a free, no-obligation quote.
+    </p>
+</section>
+
+<style>
+    .contact-info {
+        padding: 2em 1em;
+        background-color: var(--dark);
+        color: white;
+    }
+    .contact-info h2 {
+        font-size: 2rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        margin: 2em 0px;
+    }
+    .info div {
+        display: flex;
+        gap: 2em;
+    }
+
+    .contact-footer {
+        font-weight: 300;
+        line-height: 2.5em;
+        margin: 2em 0px;
+    }
+</style>

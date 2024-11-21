@@ -1,0 +1,46 @@
+---
+import AreaCard from "./area_card.astro";
+---
+
+<section class="areas">
+    <h2>Areas We Serve</h2>
+    <p>
+        Select Carpentry proudly serves Taree, NSW, and a wide range of
+        surrounding areas. If you’re located in any of the following regions,
+        we’d love to help you bring your renovation dreams to life:
+    </p>
+
+    <div class="area-list">
+        <AreaCard
+            areas={[
+                "Manning Valley",
+                "Tuncurry",
+                "Old Bar",
+                "Gloucester",
+                "Wingham",
+                "Nabiac",
+                "Harrington",
+                "Hallidays Point",
+                "Forster",
+                "Mid North Coast",
+            ]}
+        />
+    </div>
+</section>
+
+<style>
+    .areas {
+        padding: 2em 1em;
+        color: var(--black);
+    }
+    .areas p {
+        font-weight: 300;
+        line-height: 2.5rem;
+    }
+    .area-list {
+        display: flex;
+        gap: 1em;
+        flex-wrap: wrap;
+        margin: 2em 0px;
+    }
+</style>

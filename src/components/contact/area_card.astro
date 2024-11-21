@@ -1,0 +1,25 @@
+---
+import Image from "astro/components/Image.astro";
+import locationPin from "../../../public/icons/location-pin.svg";
+
+const { areas } = Astro.props;
+---
+
+{
+    areas.map((area) => (
+        <div class="location">
+            <Image src={locationPin} alt="location pin" />
+            <p>{area}</p>
+        </div>
+    ))
+}
+
+<style>
+    .location {
+        display: flex;
+        gap: 0.5em;
+        color: var(--black);
+        font-weight: 300;
+        width: calc(50% - 0.5em);
+    }
+</style>
