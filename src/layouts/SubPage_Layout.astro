@@ -1,0 +1,41 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Contact from "../components/landing/contact.astro";
+import Navbar from "../components/Navbar.astro";
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<Navbar />
+		<main>
+			<div class="subpage-title">
+				<h1>{title}</h1>
+			</div>
+			<slot />
+		</main>
+		<Contact />
+		<Footer />
+	</body>
+</html>
+
+<style>
+	.subpage-title {
+		background-color: var(--dark);
+		padding: 1em;
+		color: white;
+	}
+	.subpage-title h1 {
+		font-size: 18dvw;
+		margin-top: calc(69px + 0.5em);
+		border-bottom: 1px solid white;
+		padding-bottom: 0.5em;
+		margin-bottom: 0.5em;
+		line-height: 17dvw;
+	}
+</style>

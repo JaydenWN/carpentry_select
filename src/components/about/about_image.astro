@@ -1,0 +1,14 @@
+---
+import Image from "astro/components/Image.astro";
+import aboutImg from "../../../public/kitchen.png";
+---
+
+<Image src={aboutImg} alt="Taree renovation example" class="about_image" />
+
+<style>
+    .about_image {
+        object-fit: cover;
+        width: 100%;
+        height: 15rem;
+    }
+</style>

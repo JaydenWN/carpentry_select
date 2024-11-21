@@ -1,0 +1,26 @@
+---
+const { title, text } = Astro.props;
+---
+
+<div class="why-card">
+    <h2>{title}</h2>
+    <p>{text}</p>
+</div>
+
+<style>
+    .why-card {
+        background-color: var(--dark);
+        padding: 1em;
+        color: white;
+        display: flex;
+        gap: 1em;
+        flex-direction: column;
+    }
+    .why-card h2 {
+        font-family: "paragraph";
+        font-weight: bold;
+    }
+    .why-card p {
+        font-weight: 200;
+    }
+</style>

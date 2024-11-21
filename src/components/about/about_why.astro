@@ -1,0 +1,41 @@
+---
+import AboutWhyCard from "./about_why_card.astro";
+---
+
+<section class="why">
+    <h1>Why Choose Us?</h1>
+    <div class="why-section">
+        <AboutWhyCard
+            title="Local Expertise"
+            text="We know the Taree region inside out, giving us the edge in understanding your style preferences and needs."
+        />
+        <AboutWhyCard
+            title="Craftsmanship You Can Trust"
+            text="Every cut, join, and finish is done with precision and care."
+        />
+        <AboutWhyCard
+            title="Tailored Solutions"
+            text="Your vision is our blueprint. We work closely with you to create a space that reflects your unique style and lifestyle."
+        />
+        <AboutWhyCard
+            title="Reliable Service"
+            text="From consultation to completion, we’re with you every step of the way, ensuring transparency, punctuality, and a hassle-free experience."
+        />
+    </div>
+</section>
+
+<style>
+    .why {
+        padding: 2em 1em;
+        color: var(--black);
+    }
+    .why h1 {
+        font-size: 2em;
+    }
+    .why-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        margin: 2em 0px;
+    }
+</style>
