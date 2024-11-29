@@ -66,4 +66,44 @@ import landingImg from "../../../public/landing_hero.png";
         align-items: center;
         font-weight: bold;
     }
+
+    @media (width >= 768px) {
+        .hero {
+            padding: 4em;
+            gap: 4em;
+        }
+        .hero-text {
+        }
+    }
+
+    @media (width >= 1024px) {
+        .hero {
+            padding: 0px 0px;
+            flex-direction: row;
+        }
+        .hero-text {
+            width: 40%;
+            text-align: right;
+            border-left: 0px;
+            margin: auto;
+            padding-left: 4em;
+        }
+        .hero-image {
+            width: 60%;
+            height: 480px;
+        }
+        .image {
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-buttons {
+            margin: 0px 4em 4em 0px;
+        }
+    }
+
+    @media (width >= 1440px) {
+        .hero-text {
+            padding-left: 16rem;
+        }
+    }
 </style>

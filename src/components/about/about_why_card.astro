@@ -23,4 +23,20 @@ const { title, text } = Astro.props;
     .why-card p {
         font-weight: 200;
     }
+    @media (width >= 768px) {
+        .why-card {
+            padding: 4em;
+            gap: 2em;
+        }
+    }
+    @media (width >= 1024px) {
+        .why-card {
+            width: calc(50% - 1em);
+        }
+    }
+    @media (width >= 1440px) {
+        .why-card {
+            width: calc(50% - 4em);
+        }
+    }
 </style>

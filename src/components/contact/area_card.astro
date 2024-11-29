@@ -22,4 +22,14 @@ const { areas } = Astro.props;
         font-weight: 300;
         width: calc(50% - 0.5em);
     }
+    @media (width >= 768px) {
+        .location {
+            width: calc(50% - 1em);
+        }
+    }
+    @media (width >= 1024px) {
+        .location {
+            width: 25%;
+        }
+    }
 </style>

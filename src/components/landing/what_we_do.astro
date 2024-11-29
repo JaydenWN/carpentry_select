@@ -75,4 +75,47 @@ import outsideIcon from "../../../public/icons/outside.svg";
         gap: 4em;
         padding: 2em 0px;
     }
+    @media (width >= 768px) {
+        .what {
+            padding: 6em 4em;
+            gap: 4em;
+        }
+        .what-card {
+            gap: 2em;
+        }
+        .card-text {
+            gap: 2em;
+        }
+    }
+    @media (width >= 1024px) {
+        .what {
+            padding: 8em 6em;
+        }
+        .what-card {
+            gap: 6em;
+        }
+        .card-text {
+            font-size: 1.5rem;
+        }
+        .card-text p {
+            font-size: 1.5rem;
+            line-height: 4rem;
+        }
+        .what-cards {
+            gap: 8rem;
+        }
+    }
+    @media (width >= 1440px) {
+        .what {
+            padding: 10em 16em;
+        }
+        .what-card {
+            width: calc(50% - 4em);
+            gap: 2em;
+        }
+        .what-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
 </style>

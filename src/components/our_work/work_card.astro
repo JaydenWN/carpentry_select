@@ -18,4 +18,20 @@ const { img, imgAlt, text } = Astro.props;
         padding: 1em;
         font-weight: 300;
     }
+    .work-card {
+        width: 100%;
+    }
+    .work-card p {
+        padding: 2em;
+    }
+    @media (width >= 768px) {
+        .work-card {
+            width: 50%;
+        }
+    }
+    @media (width >= 1440px) {
+        .work-card {
+            width: 33.3%;
+        }
+    }
 </style>

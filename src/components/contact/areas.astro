@@ -43,4 +43,31 @@ import AreaCard from "./area_card.astro";
         flex-wrap: wrap;
         margin: 2em 0px;
     }
+    @media (width >= 768px) {
+        .areas {
+            padding: 6em 4em;
+        }
+        .area-list {
+            gap: 2em;
+        }
+        .areas p {
+            margin: 2em 0px 4em 0px;
+        }
+    }
+    @media (width >= 1024px) {
+        .areas {
+            padding: 8em 6em;
+        }
+        .areas h2 {
+            font-size: 3rem;
+        }
+        .area-list {
+            justify-content: space-between;
+        }
+    }
+    @media (width >= 1440px) {
+        .areas {
+            padding: 10em 16em;
+        }
+    }
 </style>

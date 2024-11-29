@@ -87,4 +87,34 @@ import arrowIcon from "../../../public/icons/arrow-right.svg";
         justify-content: space-between;
         padding: 1em 0px;
     }
+
+    @media (width >= 768px) {
+        .our_work {
+            padding: 6em 4em;
+        }
+
+        .work-cards {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .work-card {
+            width: calc(50% - 2em);
+        }
+    }
+
+    @media (width >= 1024px) {
+        .our_work {
+            padding: 8em 6em;
+        }
+        .our_work h1 {
+            font-size: 3rem;
+        }
+    }
+
+    @media (width >= 1440px) {
+        .our_work {
+            padding: 10em 16em;
+        }
+    }
 </style>

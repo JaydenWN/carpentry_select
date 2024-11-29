@@ -39,4 +39,28 @@ const { title, description } = Astro.props;
 		line-height: 17dvw;
 		text-transform: uppercase;
 	}
+	@media (width >= 768px) {
+		.subpage-title {
+			padding: 4em;
+		}
+		.subpage-title h1 {
+			font-size: 7rem;
+		}
+	}
+	@media (width >= 1024px) {
+		.subpage-title {
+			padding: 2em 6em;
+		}
+		.subpage-title h1 {
+			padding-bottom: 0.25em;
+			line-height: normal;
+			font-size: 6rem;
+		}
+	}
+
+	@media (width >= 1440px) {
+		.subpage-title {
+			padding: 2em 16em;
+		}
+	}
 </style>

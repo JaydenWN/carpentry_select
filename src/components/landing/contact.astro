@@ -3,33 +3,46 @@
 ---
 
 <section class="contact">
-    <h1>Ready to transform your home?</h1>
-    <p>
-        Let’s bring your renovation vision to life! Contact us today for a free
-        consultation and get one step closer to the kitchen, bathroom, or deck
-        you’ve always wanted.
-    </p>
+    <div class="contact-text">
+        <h1>Ready to transform your home?</h1>
+        <p>
+            Let’s bring your renovation vision to life! Contact us today for a
+            free consultation and get one step closer to the kitchen, bathroom,
+            or deck you’ve always wanted.
+        </p>
+    </div>
     <form class="contact-form">
-        <input
-            placeholder="First Name"
-            name="firstName"
-            type="text"
-            autocomplete="given-name"
-        />
-        <input
-            placeholder="Last Name"
-            name="lastName"
-            type="text"
-            autocomplete="family-name"
-        />
-        <input
-            placeholder="Email"
-            name="email"
-            type="email"
-            required
-            autocomplete="email"
-        />
-        <input placeholder="Phone" name="phone" type="tel" autocomplete="tel" />
+        <div class="inputs">
+            <input
+                placeholder="First Name"
+                name="firstName"
+                type="text"
+                autocomplete="given-name"
+                id="first-name"
+            />
+            <input
+                placeholder="Last Name"
+                name="lastName"
+                type="text"
+                autocomplete="family-name"
+                id="last-name"
+            />
+            <input
+                placeholder="Email"
+                name="email"
+                type="email"
+                required
+                autocomplete="email"
+                id="email"
+            />
+            <input
+                placeholder="Phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                id="phone"
+            />
+        </div>
         <textarea name="message" placeholder="Message"></textarea>
         <button>Submit</button>
     </form>
@@ -44,12 +57,12 @@
         flex-direction: column;
         gap: 1em;
     }
-    .contact h1 {
+    .contact-text h1 {
         font-size: 3rem;
         line-height: 1em;
         text-transform: uppercase;
     }
-    .contact p {
+    .contact-text p {
         font-weight: 300;
         line-height: 2.5rem;
     }
@@ -58,6 +71,11 @@
         flex-direction: column;
         gap: 1em;
         margin-top: 1em;
+    }
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
     }
     .contact-form input,
     textarea {
@@ -72,5 +90,55 @@
         max-width: fit-content;
         padding: 0.5em 1em;
         align-self: flex-end;
+    }
+
+    @media (width >= 768px) {
+        .contact {
+            padding: 6em 4em;
+            gap: 2em;
+        }
+        .contact-form {
+            gap: 2em;
+        }
+        .inputs {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 2em;
+        }
+        .contact-form input {
+            width: calc(50% - 1em);
+        }
+        .contact-form,
+        textarea {
+            min-height: 130px;
+        }
+    }
+
+    @media (width >= 1024px) {
+        .contact {
+            padding: 8rem 6rem;
+        }
+        .contact-form textarea {
+            height: 180px;
+        }
+        .contact p {
+            width: 60%;
+        }
+    }
+
+    @media (width >= 1440px) {
+        .contact {
+            padding: 10em 16em;
+            flex-direction: row;
+        }
+        .contact-text {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 2em;
+        }
+        .contact-form {
+            width: 50%;
+        }
     }
 </style>

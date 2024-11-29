@@ -38,4 +38,32 @@ import AboutWhyCard from "./about_why_card.astro";
         gap: 1em;
         margin: 2em 0px;
     }
+    @media (width >= 768px) {
+        .why {
+            padding: 6em 4em;
+        }
+        .why-section {
+            gap: 2em;
+            margin: 4em 0px;
+        }
+    }
+    @media (width >= 1024px) {
+        .why {
+            padding: 8em 6em;
+        }
+        .why-section {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (width >= 1440px) {
+        .why {
+            padding: 10em 16em;
+        }
+
+        .why-section {
+            gap: 4em;
+        }
+    }
 </style>

@@ -3,10 +3,10 @@
 ---
 
 <section class="intro">
-    <h1>Carpentry Select</h1>
+    <h1>Select Carpentry</h1>
     <p>
         Your home deserves spaces that are as functional as they are beautiful.
-        At Carpentry Select, we specialize in creating dream kitchens, luxurious
+        At Select Carpentry, we specialize in creating dream kitchens, luxurious
         bathrooms, and outdoor decks that inspire. Whether you're looking to
         refresh your interiors or expand your outdoor living space, our team
         delivers craftsmanship you can trust.
@@ -30,5 +30,26 @@
     }
     .intro p {
         font-weight: 200;
+    }
+
+    @media (width >= 768px) {
+        .intro {
+            padding: 6em 4em;
+        }
+    }
+    @media (width >= 1024px) {
+        .intro {
+            padding: 8em 6em;
+            gap: 4em;
+        }
+        .intro p {
+            font-size: 1.5rem;
+            line-height: 3rem;
+        }
+    }
+    @media (width >= 1440px) {
+        .intro {
+            padding: 10em 16em;
+        }
     }
 </style>

@@ -9,8 +9,10 @@ const themeClass = theme === "light" ? "theme-light" : "theme-dark";
 
 <section class={themeClass}>
     <div class="service-card">
-        <h2>{title}</h2>
-        <p>{text}</p>
+        <div class="text">
+            <h2>{title}</h2>
+            <p>{text}</p>
+        </div>
         <ul class="points">
             {
                 points.map((point) => (
@@ -72,5 +74,36 @@ const themeClass = theme === "light" ? "theme-light" : "theme-dark";
         padding: 0px;
         font-size: 1.25rem;
         font-weight: 300;
+    }
+    @media (width >= 768px) {
+        .service-card {
+            padding: 6em 4em;
+        }
+        .service-card h2 {
+            margin-bottom: 1em;
+        }
+        .points {
+            margin-top: 4em;
+            gap: 4em;
+        }
+    }
+    @media (width >= 1024px) {
+        .service-card {
+            display: flex;
+            gap: 5em;
+            flex-direction: row;
+        }
+        .text {
+            width: 50%;
+        }
+        .point {
+            align-items: center;
+        }
+    }
+    @media (width >= 1440px) {
+        .service-card {
+            padding: 10em 16em;
+            gap: 8em;
+        }
     }
 </style>
